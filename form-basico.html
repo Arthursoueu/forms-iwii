@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/script.js">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="usuario" required id="login">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="senha" required id="senha">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label for=""><input type="checkbox">lembrar senha</label>
+                <a href="#">esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn" onclick="logar()">login</button>
+            
+            <div class="register-link">
+                <p> não tem uma conta?<a href="#">regitre-se</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function logar() {
+
+                let login = document.getElementById("login").value;
+                let senha = document.getElementById("senha").value;
+
+
+                if (login === "usuario" && senha === "123") {
+                    alert("Usuário Autenticado");
+                } else {
+                    alert("Usuário ou senha incorretos");
+                }
+            }
+    </script>
+</body>
+</html>
